@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('content')->nullable();
             $table->string('slug');
             $table->string('status')->default('draft');
+            $table->integer('view')->default(0);
             $table->timestamps();
         });
     }

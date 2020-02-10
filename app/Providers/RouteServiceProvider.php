@@ -33,7 +33,10 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot();
 
         // Explicit Binding
-        Route::bind('post', 'App\Post');
+        // Route::model('post', \App\Post::class);
+
+        // Global Constraints
+        Route::pattern('id', '[0-9]+');
     }
 
     /**
